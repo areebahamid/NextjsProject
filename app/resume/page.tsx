@@ -65,7 +65,7 @@ export default function ResumePage() {
                 <div className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
                     <div>
-                      <p className="text-muted-foreground">2022 - Present</p>
+                      <p className="text-muted-foreground">2024 - Present</p>
                     </div>
                     <div>
                       <h3 className="text-lg md:text-xl font-bold gradient-text">Lead UI/UX Designer</h3>
