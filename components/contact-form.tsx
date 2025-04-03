@@ -19,15 +19,32 @@ export default function ContactForm() {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false)
+
+      // Show toast notification
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       })
 
+      // Show alert
+      alert("Message sent successfully! Thank you for your message.")
+
       // Reset form
       const form = e.target as HTMLFormElement
       form.reset()
     }, 1500)
+  }
+
+  // Add this error handling code for demonstration
+  // In a real implementation, this would be in a try/catch block
+  const handleError = () => {
+    setIsSubmitting(false)
+    toast({
+      title: "Error",
+      description: "There was an error sending your message. Please try again.",
+      variant: "destructive",
+    })
+    alert("Error: There was a problem sending your message. Please try again later.")
   }
 
   return (

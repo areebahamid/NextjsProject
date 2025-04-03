@@ -20,11 +20,11 @@ const fadeIn = {
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <AnimatedBackground />
       <Navigation />
 
-      <div className="container py-12 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <motion.div
           className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12"
           initial="hidden"
@@ -33,9 +33,11 @@ export default function ResumePage() {
         >
           <div>
             <div className="highlight-gradient"></div>
-            <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4 md:mb-0 gradient-text">Resume</h1>
+            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-0 gradient-text">
+              Resume
+            </h1>
           </div>
-          <Button className="btn-gradient shadow-lg hover:shadow-xl transition-all">
+          <Button className="btn-gradient shadow-lg hover:shadow-xl transition-all mt-4 md:mt-0">
             <a href="/AreebaHamid Resume.pdf" download className="inline-flex items-center">
               <Download className="mr-2 h-4 w-4" />
               Download PDF
@@ -44,12 +46,12 @@ export default function ResumePage() {
         </motion.div>
 
         <motion.div initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.2 }}>
-          <Card3D className="glass-card p-8 rounded-2xl shadow-lg mb-12" disableEffect={true}>
-            <div className="space-y-12 max-w-4xl">
+          <Card3D className="glass-card p-6 md:p-8 rounded-2xl shadow-lg mb-12" disableEffect={true}>
+            <div className="space-y-8 md:space-y-12 max-w-4xl">
               {/* Profile Summary */}
               <section>
-                <h2 className="text-2xl font-bold mb-4 gradient-text">Profile</h2>
-                <p className="text-lg">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 gradient-text">Profile</h2>
+                <p className="text-base md:text-lg">
                   UI/UX Designer with 3+ years of experience creating intuitive and visually appealing digital
                   experiences. Proficient in Figma, Framer, Webflow, Lottie Design, Adobe InDesign, and Adobe Photoshop.
                   Skilled in auto-layout, components, interactive prototypes, user flows, usability principles, and
@@ -59,14 +61,14 @@ export default function ResumePage() {
 
               {/* Experience */}
               <section>
-                <h2 className="text-2xl font-bold mb-6 gradient-text">Experience</h2>
+                <h2 className="text-xl md:text-2xl font-bold mb-6 gradient-text">Experience</h2>
                 <div className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
                     <div>
                       <p className="text-muted-foreground">2022 - Present</p>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold gradient-text">Lead UI/UX Designer</h3>
+                      <h3 className="text-lg md:text-xl font-bold gradient-text">Lead UI/UX Designer</h3>
                       <p className="text-primary mb-2">DotLabs inc.</p>
                       <ul className="list-disc pl-5 space-y-2">
                         <li>
@@ -88,7 +90,7 @@ export default function ResumePage() {
                       <p className="text-muted-foreground">2020 - 2022</p>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold gradient-text">UI/UX Designer</h3>
+                      <h3 className="text-lg md:text-xl font-bold gradient-text">UI/UX Designer</h3>
                       <p className="text-primary mb-2">Freelancing</p>
                       <ul className="list-disc pl-5 space-y-2">
                         <li>Designed user interfaces for web and mobile applications</li>
@@ -103,13 +105,15 @@ export default function ResumePage() {
 
               {/* Education */}
               <section>
-                <h2 className="text-2xl font-bold mb-6 gradient-text">Education</h2>
+                <h2 className="text-xl md:text-2xl font-bold mb-6 gradient-text">Education</h2>
                 <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
                   <div>
                     <p className="text-muted-foreground">2022-2026</p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold gradient-text">Bachelor of Science in COMPUTER SCIENCE</h3>
+                    <h3 className="text-lg md:text-xl font-bold gradient-text">
+                      Bachelor of Science in COMPUTER SCIENCE
+                    </h3>
                     <p className="text-primary">Comsats University, Lahore</p>
                     <p className="text-primary">CGPA: 3.34</p>
                   </div>
@@ -119,11 +123,11 @@ export default function ResumePage() {
           </Card3D>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <motion.div initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.4 }}>
-            <Card3D className="glass-card p-8 rounded-2xl shadow-lg h-full" disableEffect={true}>
+            <Card3D className="glass-card p-6 md:p-8 rounded-2xl shadow-lg h-full" disableEffect={true}>
               <section>
-                <h2 className="text-2xl font-bold mb-6 gradient-text">Skills</h2>
+                <h2 className="text-xl md:text-2xl font-bold mb-6 gradient-text">Skills</h2>
                 <div className="grid grid-cols-1 gap-y-4">
                   <div>
                     <h3 className="font-bold mb-2 text-accent">Design</h3>
@@ -152,21 +156,21 @@ export default function ResumePage() {
           </motion.div>
 
           <motion.div initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.6 }}>
-            <Card3D className="glass-card p-8 rounded-2xl shadow-lg h-full" disableEffect={true}>
+            <Card3D className="glass-card p-6 md:p-8 rounded-2xl shadow-lg h-full" disableEffect={true}>
               <section>
-                <h2 className="text-2xl font-bold mb-6 gradient-text">Certifications</h2>
+                <h2 className="text-xl md:text-2xl font-bold mb-6 gradient-text">Certifications</h2>
                 <ul className="space-y-4">
                   <li>
                     <h3 className="font-bold gradient-text">Google UX Design Professional Certificate</h3>
-                    <p className="text-muted-foreground">Google, 2021</p>
+                    <p className="text-muted-foreground">Google, 2023</p>
                   </li>
                   <li>
                     <h3 className="font-bold gradient-text">Advanced Figma for UX Design</h3>
-                    <p className="text-muted-foreground">Figma, 2022</p>
+                    <p className="text-muted-foreground">Figma, 2024</p>
                   </li>
                 </ul>
 
-                <h2 className="text-2xl font-bold my-6 gradient-text">Languages</h2>
+                <h2 className="text-xl md:text-2xl font-bold my-6 gradient-text">Languages</h2>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h3 className="font-bold">Urdu</h3>

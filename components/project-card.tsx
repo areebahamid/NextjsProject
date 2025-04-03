@@ -24,12 +24,12 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${reversed ? "lg:flex-row-reverse" : ""}`}
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center ${reversed ? "lg:flex-row-reverse" : ""}`}
     >
-      <div className={`space-y-4 ${reversed ? "lg:order-2" : ""} pl-4 lg:pl-0`}>
+      <div className={`space-y-4 ${reversed ? "lg:order-2" : ""}`}>
         <div className="highlight-gradient"></div>
-        <h3 className="font-playfair text-3xl font-bold gradient-text text-center lg:text-left">{title}</h3>
-        <p className="text-muted-foreground text-center lg:text-left">{description}</p>
+        <h3 className="font-playfair text-2xl md:text-3xl font-bold gradient-text">{title}</h3>
+        <p className="text-muted-foreground">{description}</p>
 
         {/* Show link only if projectUrl is provided */}
         {projectUrl && (
@@ -47,7 +47,7 @@ export default function ProjectCard({
 
       <div className={`${reversed ? "lg:order-1" : ""}`}>
         <motion.div
-          className="rounded-2xl"
+          className="rounded-2xl overflow-hidden"
           animate={{
             y: [0, -15, 0],
           }}
@@ -64,10 +64,11 @@ export default function ProjectCard({
             width={800}
             height={400} // Reduced height for better fit
             alt={title}
-            className="rounded-2xl shadow-xl object-cover"
+            className="rounded-2xl shadow-xl object-cover w-full h-auto"
           />
         </motion.div>
       </div>
     </div>
   )
 }
+

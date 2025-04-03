@@ -8,8 +8,8 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="py-6 px-4 md:px-6 sticky top-0 z-50 glass-effect">
-      <div className="container flex items-center justify-between">
+    <header className="py-4 md:py-6 px-4 md:px-6 sticky top-0 z-50 glass-effect">
+      <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="font-playfair text-xl font-bold gradient-text">
           Areeba Hamid
         </Link>
@@ -47,32 +47,32 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="fixed inset-0 glass-effect z-40 md:hidden pt-20">
+          <div className="fixed inset-0 bg-background/95 backdrop-blur-md z-40 md:hidden pt-20">
             <nav className="flex flex-col items-center space-y-8 text-xl">
               <Link
                 href="/#about"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/#projects"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 href="/resume"
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Resume
               </Link>
               <Link
                 href="/contact"
-                className="btn-gradient px-6 py-2 rounded-full"
+                className="btn-gradient px-6 py-2 rounded-full shadow-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

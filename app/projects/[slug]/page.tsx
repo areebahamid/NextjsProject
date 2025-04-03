@@ -102,11 +102,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <AnimatedBackground />
       <Navigation />
 
-      <div className="container py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link href="/#projects" className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to all projects

@@ -46,7 +46,7 @@ export default function ContactPage() {
       <AnimatedBackground />
       <Navigation />
 
-      <div className="container py-12 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

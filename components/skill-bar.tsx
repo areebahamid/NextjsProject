@@ -16,9 +16,9 @@ export default function SkillBar({ skill, percentage }: SkillBarProps) {
   }, [])
 
   return (
-    <div className="space-y-2 p-4 rounded-lg glass-card">
-      <div className="flex justify-between items-center">
-        <span className="font-medium">{skill}</span>
+    <div className="space-y-2 p-4 rounded-lg glass-card overflow-hidden">
+      <div className="flex flex-wrap justify-between items-center gap-2">
+        <span className="font-medium truncate">{skill}</span>
         <span className="text-sm font-bold px-2 py-1 gradient-bg-blue text-white rounded-full">{percentage}%</span>
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">
